@@ -14,5 +14,13 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('index');
+    return view('index', [
+        'userName' => 'Nome do usuário',
+        'userDescription' => 'Uma descrição onde o usuário pode falar sobre seu trabalho ou deixar informações que ache importante',
+        'userImage' => null // Pode ser uma URL de imagem
+    ]);
+});
+
+Route::get('/exemplo', function () {
+    return view('exemplo-componentes');
 });
